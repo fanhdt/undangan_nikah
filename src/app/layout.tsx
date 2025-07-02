@@ -2,14 +2,30 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const KaushanScript = localFont({
+  src: "./fonts/KaushanScript-Regular.ttf",
+  variable: "--font-kaushan-script",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const Niramit = localFont({
+  src: "./fonts/Niramit-Regular.woff",
+  variable: "--font-niramit",
+  weight: "100 900",
+});
+const Niramitbold = localFont({
+  src: "./fonts/Niramit-Bold.woff",
+  variable: "--font-niramit-bold",
+  weight: "100 900",
+});
+const NiramitMedium = localFont({
+  src: "./fonts/Niramit-Medium.woff",
+  variable: "--font-niramit-medium",
+  weight: "100 900",
+});
+const NiramitSemibold = localFont({
+  src: "./fonts/Niramit-Medium.woff",
+  variable: "--font-niramit-semibold",
   weight: "100 900",
 });
 
@@ -25,11 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${KaushanScript.variable} ${Niramit.variable} ${Niramitbold.variable} ${NiramitSemibold.variable} ${NiramitMedium.variable} antialiased`}>{children}</body>
     </html>
   );
 }
