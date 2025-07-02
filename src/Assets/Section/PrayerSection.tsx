@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
 
@@ -23,12 +24,12 @@ const PrayerSection = () => {
 
       {/* Doa */}
       <div className="text-center mb-6 px-4">
-        <p className="font-niramit text-sm leading-relaxed text-gray-700">Atas kehadiran dan do'a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.</p>
+        <p className="font-niramit text-sm leading-relaxed text-gray-700">Atas kehadiran dan do&apos;a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.</p>
       </div>
 
       {/* Salam Penutup */}
       <div className="text-center mb-8">
-        <p className="font-niramit text-sm font-semibold text-gray-800">Wassalamua'alaikum Warahmatullahi Wabarakatuh</p>
+        <p className="font-niramit text-sm font-semibold text-gray-800">Wassalamua&apos;alaikum Warahmatullahi Wabarakatuh</p>
       </div>
 
       {/* Bunga Kiri Bawah */}

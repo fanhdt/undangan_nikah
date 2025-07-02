@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -49,7 +51,7 @@ const StorySection = () => {
     // Get the last card element to use as end trigger
     const lastCard = cards[cards.length - 1];
 
-    // Create timeline for progress bar - end when last card is fully visible
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const progressTl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
