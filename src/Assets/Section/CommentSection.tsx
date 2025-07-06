@@ -47,6 +47,7 @@ const CommentSection: React.FC = () => {
           table: "comments",
         },
         (payload) => {
+          console.log("📨 New comment received:", payload.new);
           setComments((prev) => [payload.new as Comment, ...prev]);
         }
       )
@@ -69,19 +70,28 @@ const CommentSection: React.FC = () => {
     try {
       console.log("📤 Submitting comment...", { name: name.trim(), attendance, message: message.trim() });
 
-      const { error } = await supabase.from("comments").insert([
-        {
-          name: name.trim(),
-          attendance,
-          message: message.trim(),
-        },
-      ]);
+      const { data, error } = await supabase
+        .from("comments")
+        .insert([
+          {
+            name: name.trim(),
+            attendance,
+            message: message.trim(),
+          },
+        ])
+        .select();
 
       if (error) {
         console.error("❌ Error inserting comment:", error);
         alert("Gagal mengirim komentar. Silakan coba lagi.");
       } else {
-        console.log("✅ Comment inserted successfully");
+        console.log("✅ Comment inserted successfully:", data);
+
+        // Langsung tambahkan komentar baru ke state untuk update UI langsung
+        if (data && data.length > 0) {
+          setComments((prev) => [data[0] as Comment, ...prev]);
+        }
+
         // Reset form
         setName("");
         setAttendance("hadir");

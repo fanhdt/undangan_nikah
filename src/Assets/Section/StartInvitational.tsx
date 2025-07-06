@@ -1,4 +1,4 @@
-// StartInvitational.tsx - Fixed with dynamic guest name
+// StartInvitational.tsx - Fixed with immediate image loading
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -40,6 +40,7 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
 
   // Use URL parameter if available, otherwise use prop or default
   const displayGuestName = urlGuestName?.trim() ? urlGuestName : guestName || "Teman Online";
+
   // Function to capitalize first letter of each word
   const capitalizeWords = (str: string) => {
     return str.replace(/\b\w/g, (char) => char.toUpperCase());
@@ -146,13 +147,8 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
     <div ref={containerRef} className="fixed inset-0 z-50 overflow-hidden">
       {/* Full Viewport Background Image */}
       <div className="absolute inset-0 w-full h-full">
-        {/* Placeholder for couple image - replace with actual image */}
-        <div className="w-full h-full bg-gradient-to-br from-rose-300 via-pink-200 to-orange-200 flex items-center justify-center">
-          <span className="text-gray-600 text-lg font-medium">Foto Pasangan Full Screen</span>
-        </div>
-
-        {/* Uncomment and use this when you have the actual image */}
-        <Image src={coupleImage} alt={`${groomName} & ${brideName}`} fill className="object-cover object-[45%]" priority quality={100} />
+        {/* Background Image - Always visible */}
+        <Image src={coupleImage} alt={`${groomName} & ${brideName}`} fill className="object-cover object-[45%]" priority quality={100} sizes="100vw" />
       </div>
 
       {/* Dark Overlay for Text Readability */}
