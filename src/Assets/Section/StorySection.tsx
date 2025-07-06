@@ -98,19 +98,19 @@ const StorySection = () => {
   };
 
   return (
-    <section className="w-full  bg-[#1E1E1E]">
-      <div ref={sectionRef} className="relative text-white py-16 px-4 md:py-24 min-h-screen">
+    <section className="w-full bg-[#1E1E1E] overflow-hidden">
+      <div ref={sectionRef} className="relative text-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 min-h-screen">
         {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-2xl md:text-4xl font-niramitmedium mb-4">Sebuah Kisah</h2>
-          <h3 className="text-3xl md:text-5xl font-kaushian text-white mb-6">Perjalanan Kami</h3>
-          <p className="text-gray-400 text-sm md:text-base max-w-md mx-auto">Dari pertemuan pertama hingga janji suci, setiap momen adalah bagian dari cerita cinta yang indah</p>
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-niramitmedium mb-4">Sebuah Kisah</h2>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-kaushian text-white mb-4 sm:mb-6">Perjalanan Kami</h3>
+          <p className="text-gray-400 text-xs sm:text-sm md:text-base max-w-xs sm:max-w-md mx-auto px-2">Dari pertemuan pertama hingga janji suci, setiap momen adalah bagian dari cerita cinta yang indah</p>
         </div>
 
         {/* Main Content */}
-        <div className="relative max-w-6xl mx-auto">
-          {/* Progress Bar - Always on the right */}
-          <div className="absolute right-4 md:right-8 top-0 bottom-0 w-1">
+        <div className="relative w-full max-w-6xl mx-auto">
+          {/* Progress Bar - Responsive positioning */}
+          <div className="absolute right-2 sm:right-4 md:right-6 lg:right-8 top-0 bottom-0 w-0.5 sm:w-1">
             <div className="relative h-full">
               {/* Background line */}
               <div className="absolute inset-0 w-full bg-gray-700 rounded-full"></div>
@@ -118,25 +118,27 @@ const StorySection = () => {
               <div ref={progressBarRef} className="absolute inset-0 w-full bg-white rounded-full"></div>
               {/* Dots for each story point */}
               {storyData.map((_, index) => (
-                <div key={index} className="absolute w-3 h-3 bg-white rounded-full -left-1" style={{ top: `${(index / (storyData.length - 1)) * 100}%` }}></div>
+                <div key={index} className="absolute w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full -left-[2.5px] sm:-left-1" style={{ top: `${(index / (storyData.length - 1)) * 100}%` }}></div>
               ))}
             </div>
           </div>
 
           {/* Story Cards */}
-          <div className="space-y-16 md:space-y-24 pr-12 md:pr-20">
+          <div className="space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24 pr-6 sm:pr-8 md:pr-12 lg:pr-16 xl:pr-20">
             {storyData.map((story, index) => (
-              <div key={index} ref={(el) => addToRefs(el, index)} className="bg-white font-niramit text-gray-900 rounded-2xl p-6 md:p-8 shadow-2xl max-w-lg md:max-w-2xl">
-                <div className="mb-4">
-                  <span className="text-lg md:text-xl font-bold text-gray-600">{story.year}</span>
+              <div key={index} ref={(el) => addToRefs(el, index)} className="bg-white font-niramit text-gray-900 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl">
+                <div className="mb-3 sm:mb-4">
+                  <span className="text-base sm:text-lg md:text-xl font-bold text-gray-600">{story.year}</span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-gray-900">{story.title}</h3>
-                <p className="text-gray-700 leading-relaxed text-sm md:text-base">{story.description}</p>
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-gray-900">{story.title}</h3>
+                <p className="text-gray-700 leading-relaxed text-xs sm:text-sm md:text-base">{story.description}</p>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* Wave Separator */}
       <div className="relative pt-24 w-full">
         <div className="absolute inset-x-0 -bottom-2">
           <svg className="w-full h-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

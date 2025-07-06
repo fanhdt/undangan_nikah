@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { MapPin, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 
 interface TimeLeft {
   days: number;
@@ -38,6 +38,10 @@ const MainSection: React.FC = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  const handleAddressClick = () => {
+    window.open("https://maps.app.goo.gl/gV2bHx1NgxebaDqP8", "_blank");
+  };
 
   return (
     <section className="bg-cream">
@@ -80,18 +84,18 @@ const MainSection: React.FC = () => {
               <div className="text-gray-700 font-niramitmedium">08:00 - 09:00 WIB</div>
 
               <div className="flex items-start justify-center gap-2 mt-4">
-                <MapPin className="w-4 h-4 text-gray-600 mt-1 flex-shrink-0" />
+                <div className="w-4 h-4 text-gray-600 mt-1 flex" />
                 <div className="text-center">
-                  <div className="font-semibold text-gray-800">Gor Desa Cipongpong</div>
+                  <div className="font-semibold text-gray-800">Kediaman Mempelai Wanita</div>
                   <div className="text-sm text-gray-600 leading-relaxed">
-                    Jl. Serangmekar, Ciparuy, Bandung
+                    Kp. Pasar Kemis Blok. Sukaninggal RT. 01/14 Manggahang, Kec. Baleendah
                     <br />
-                    Regency, West Java 40331
+                    Kab. Bandung, Jawa Barat 40375
                   </div>
                 </div>
               </div>
 
-              <button className="group mt-4 px-6 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto outline outline-black outline-1 hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+              <button onClick={handleAddressClick} className="group mt-4 px-6 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto outline outline-black outline-1 hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="transition-colors duration-300 text-black group-hover:text-white">
                   <path
                     fill="currentColor"
@@ -105,7 +109,7 @@ const MainSection: React.FC = () => {
 
           {/* Resepsi Card */}
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <h2 className="text-4xl font-kaushian font-bold text-center mb-4 text-gray-800">Resepsi</h2>
+            <h2 className="text-4xl font-kaushian font-bold text-center mb-4 text-gray-800">Walimatul &apos;Ursy</h2>
 
             <div className="space-y-3 text-center">
               <div className="flex items-center justify-center gap-2">
@@ -115,18 +119,18 @@ const MainSection: React.FC = () => {
               <div className=" text-gray-700 font-niramitmedium">08:00 - 09:00 WIB</div>
 
               <div className="flex items-start justify-center gap-2 mt-4">
-                <MapPin className="w-4 h-4 text-gray-600 mt-1 flex-shrink-0" />
+                <div className="w-4 h-4 text-gray-600 mt-1 flex-shrink-0" />
                 <div className="text-center">
-                  <div className="font-semibold font-niramit text-gray-800">Gor Desa Cipongpong</div>
+                  <div className="font-semibold font-niramit text-gray-800">Kediaman Mempelai Wanita</div>
                   <div className="text-sm font-niramit text-gray-600 leading-relaxed">
-                    Jl. Serangmekar, Ciparuy, Bandung
+                    Kp. Pasar Kemis Blok. Sukaninggal RT. 01/14 Manggahang, Kec. Baleendah
                     <br />
-                    Regency, West Java 40331
+                    Kab. Bandung, Jawa Barat 40375
                   </div>
                 </div>
               </div>
 
-              <button className="group mt-4 px-6 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto outline outline-black outline-1 hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+              <button onClick={handleAddressClick} className="group mt-4 px-6 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto outline outline-black outline-1 hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="transition-colors duration-300 text-black group-hover:text-white">
                   <path
                     fill="currentColor"
