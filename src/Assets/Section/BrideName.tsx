@@ -42,9 +42,9 @@ const BrideName = () => {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kaushian text-gray-900 mb-3 sm:mb-4 md:mb-5 drop-shadow-sm">Mutiara</h2>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-kaushian text-gray-700 mb-4 sm:mb-5 md:mb-6 leading-relaxed">Mutiara Az Zahra</p>
+            <p className="text-xl  md:text-3xl lg:text-4xl font-kaushian text-gray-700 mb-4 sm:mb-5 md:mb-6 leading-relaxed">Mutiara Az Zahra</p>
             <div className="bg-amber-50 rounded-2xl p-4 sm:p-5 md:p-6 border border-amber-200 shadow-sm">
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 font-niramit text-center leading-relaxed">
+              <p className="text-xs md:text-lg lg:text-xl text-gray-700 font-niramit text-center leading-relaxed">
                 Putri pertama dari pasangan
                 <br className="sm:hidden" />
                 <span className="sm:inline"> </span>
@@ -77,9 +77,9 @@ const BrideName = () => {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-kaushian text-gray-900 mb-3 sm:mb-4 md:mb-5 drop-shadow-sm">Daffa</h2>
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-kaushian text-gray-700 mb-4 sm:mb-5 md:mb-6 text-center leading-relaxed">Muhammad Tsabat Daffa Ash-Shiddiq</p>
+            <p className="text-xl md:text-3xl lg:text-4xl font-kaushian text-gray-700 mb-4 sm:mb-5 md:mb-6 text-center leading-relaxed">Muhammad Tsabat Daffa Ash-Shiddiq</p>
             <div className="bg-amber-50 rounded-2xl p-4 sm:p-5 md:p-6 border border-amber-200 shadow-sm">
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 font-niramit text-center leading-relaxed">
+              <p className="text-sm md:text-lg lg:text-xl text-gray-700 font-niramit text-center leading-relaxed">
                 Putra pertama dari pasangan
                 <br className="sm:hidden" />
                 <span className="sm:inline"> </span>
