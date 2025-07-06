@@ -11,27 +11,22 @@ const PrayerSection = () => {
     <div className="relative bg-cream pt-16 py-8 w-full min-h-screen">
       {/* Container untuk konten utama */}
       <div className="relative max-w-md mx-auto px-4 sm:max-w-lg sm:px-6 md:max-w-xl md:px-8 lg:max-w-2xl xl:max-w-4xl">
+        {/* Salam Pembuka */}
+        <div className="text-center mb-12 md:mb-16">
+          <p className="font-kaushian text-xl sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">Assalamua'alaikum Warahmatullahi Wabarakatuh</p>
+        </div>
+
         {/* Header */}
-        <div className="text-center mb-8 md:mb-12">
+        <div className="text-center mb-8 md:mb-12 ">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-niramitbold text-gray-800">QS.Ar Rum:21</h2>
         </div>
 
         {/* Ayat Al-Quran */}
-        <div className="text-center mb-8 md:mb-12">
-          <p className="font-niramit text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-700 italic max-w-4xl mx-auto">
+        <div className="text-center mb-8 md:mb-12 px-4">
+          <p className="font-niramit text-base sm:text-lg md:text-xl lg:text-lg leading-relaxed text-gray-700 italic max-w-4xl mx-auto">
             "Dan diantara tanda-tanda kekuasaan-Nya ialah ciptaan-Nya untukmu pasangan hidup dari jenismu sendiri, supaya kamu mendapatkan ketenangan hati dan dijadikan-Nya kasih sayang diantara kamu. Sesungguhnya yang demikian menjadi
             tanda-tanda kebesaran-Nya bagi orang-orang yang berfikir"
           </p>
-        </div>
-
-        {/* Doa */}
-        <div className="text-center mb-8 md:mb-12">
-          <p className="font-niramit text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-700 max-w-3xl mx-auto">Atas kehadiran dan do&apos;a restu dari Bapak/Ibu/Saudara/i sekalian, kami mengucapkan terima kasih.</p>
-        </div>
-
-        {/* Salam Penutup */}
-        <div className="text-center mb-12 md:mb-16">
-          <p className="font-niramit text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-800">Wassalamua'alaikum Warahmatullahi Wabarakatuh</p>
         </div>
       </div>
 

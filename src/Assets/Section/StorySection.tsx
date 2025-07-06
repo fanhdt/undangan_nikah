@@ -17,23 +17,22 @@ const StorySection = () => {
     {
       year: "2019",
       title: "Awal Bertemu",
-      description:
-        "Pertemuan pertama kami terjadi di sebuah kafe kecil di pusat kota. Mata kami bertemu sesaat, dan ada sesuatu yang berbeda dari pertemuan biasa. Percakapan mengalir begitu natural, seolah kami sudah saling mengenal sejak lama.",
+      description: "Pertemuan pertama kami pada saat MPLS SMA. Tak sengaja berpapasan di depan pintu aula (ruang orientasi), dan siapa sangka kami menjadi siswa di ruang kelas yang sama.",
     },
     {
-      year: "2020",
-      title: "Hubungan Dimulai",
-      description: "Setelah berbulan-bulan saling mengenal lebih dalam, kami memutuskan untuk memulai hubungan yang serius. Meski pandemi menghalangi, cinta kami justru semakin kuat melalui video call dan pesan-pesan manis setiap hari.",
+      year: "2022",
+      title: "Saling Mengenal",
+      description: "Kami mulai dekat dan berkomunikasi satu sama lain setelah lulus sekolah. Waktu ke waktu, kami habiskan untuk saling bercerita, berbagi suka dan duka.",
     },
     {
-      year: "2021",
+      year: "2024",
       title: "Lamaran",
-      description: "Di bawah langit berbintang pada malam yang sempurna, dia berlutut dan mengucapkan kata-kata yang telah lama kutunggu. Air mata kebahagiaan mengalir ketika aku mengatakan 'ya' untuk memulai babak baru kehidupan bersama.",
+      description: "Di siang yang cerah, kami mengadakan pertemuan keluarga. Berkenalan dengan kedua pihak keluarga, membahas keberlanjutan hubungan ini dan memantapkan hati untuk melanjutkan ke jenjang yang lebih serius.",
     },
     {
       year: "2025",
       title: "Pernikahan",
-      description: "Hari yang paling bahagia dalam hidup kami. Dikelilingi keluarga dan teman-teman tercinta, kami mengucapkan janji suci untuk saling mencintai, menghormati, dan mendukung dalam suka maupun duka hingga akhir hayat.",
+      description: "Sampailah pada waktu yang ditunggu tunggu, kami mengikat janji suci untuk menjadi pasangan sehidup sesurga",
     },
   ];
 
@@ -98,7 +97,7 @@ const StorySection = () => {
   };
 
   return (
-    <section className="w-full bg-[#1E1E1E] overflow-hidden">
+    <section className="w-full bg-[#1E1E1E]">
       <div ref={sectionRef} className="relative text-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 min-h-screen">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">

@@ -1,9 +1,10 @@
-// StartInvitational.tsx - Updated with full viewport photo
+// StartInvitational.tsx - Fixed with dynamic guest name
 "use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 interface StartInvitationalProps {
   onOpenInvitation: () => void;
@@ -19,10 +20,11 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
   onOpenInvitation,
   groomName = "Mutiara",
   brideName = "Daffa",
-  guestName = "Yth. Bpk/Ibu/Saudara/i",
-  eventDate = "Teman Online",
-  eventLocation = "di Tempat",
-  coupleImage = "/Image/MutDaffa.png",
+  guestName = "Teman Online",
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  eventDate = "Sabtu, 15 Februari 2025",
+  eventLocation = "Bandung",
+  coupleImage = "/Image/MutDaffaPotrait.png",
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
@@ -31,6 +33,17 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
   const coupleNamesRef = useRef<HTMLDivElement>(null);
   const guestInfoRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+
+  // Get URL parameters
+  const searchParams = useSearchParams();
+  const urlGuestName = searchParams.get("to");
+
+  // Use URL parameter if available, otherwise use prop or default
+  const displayGuestName = urlGuestName?.trim() ? urlGuestName : guestName || "Teman Online";
+  // Function to capitalize first letter of each word
+  const capitalizeWords = (str: string) => {
+    return str.replace(/\b\w/g, (char) => char.toUpperCase());
+  };
 
   useEffect(() => {
     // Initial animation when component mounts
@@ -139,7 +152,7 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
         </div>
 
         {/* Uncomment and use this when you have the actual image */}
-        <Image src={coupleImage} alt={`${groomName} & ${brideName}`} fill className="object-cover object-center" priority quality={100} />
+        <Image src={coupleImage} alt={`${groomName} & ${brideName}`} fill className="object-cover object-[45%]" priority quality={100} />
       </div>
 
       {/* Dark Overlay for Text Readability */}
@@ -149,7 +162,7 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
       <div ref={contentRef} className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8">
         {/* Title */}
         <div ref={titleRef} className="mb-6 sm:mb-8">
-          <h1 className="text-lg sm:text-xl md:text-2xl font-light text-white tracking-widest mb-2 drop-shadow-lg">UNDANGAN PERNIKAHAN</h1>
+          <h1 className="text-lg sm:text-xl md:text-2xl font-niramit text-white tracking-widest mb-2 drop-shadow-lg">UNDANGAN PERNIKAHAN</h1>
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-white/70 to-transparent mx-auto"></div>
         </div>
 
@@ -167,8 +180,14 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
         {/* Guest Information */}
         <div ref={guestInfoRef} className="mb-12 sm:mb-16">
           <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/30 shadow-2xl">
-            <p className="text-white text-base font-niramit sm:text-lg mb-2 drop-shadow-md">{guestName}</p>
-            <p className="text-white/90 font-niramitmedium text-lg sm:text-xl drop-shadow-md">{eventDate}</p>
+            {displayGuestName.toLowerCase() !== "teman online" ? (
+              <>
+                <p className="text-white text-base font-niramit sm:text-lg mb-2 drop-shadow-md">Kepada Yth. Bpk/Ibu/Saudara/i</p>
+                <p className="text-white/90 font-niramitmedium text-lg sm:text-xl drop-shadow-md mb-1">{capitalizeWords(displayGuestName)}</p>
+              </>
+            ) : (
+              <p className="text-white/90 font-niramitmedium text-lg sm:text-xl drop-shadow-md mb-1">{capitalizeWords(displayGuestName)}</p>
+            )}
             <p className="text-white/90 font-niramit text-base sm:text-lg drop-shadow-md">{eventLocation}</p>
           </div>
         </div>

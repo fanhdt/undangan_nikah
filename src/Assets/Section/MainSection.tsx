@@ -52,21 +52,21 @@ const MainSection: React.FC = () => {
             <p className="text-gray-600 mb-10 font-niramit text-xl">Acara akan diselenggarakan</p>
 
             {/* Countdown Timer */}
-            <div className="flex justify-center gap-4 mb-8 space-x-9">
+            <div className="flex justify-center gap-4 mb-8 space-x-8">
               <div className="text-center ">
-                <div className="text-5xl font-kaushian text-gray-800 mb-1">{timeLeft.days.toString().padStart(2, "0")}</div>
+                <div className="text-2xl font-kaushian text-gray-800 mb-1">{timeLeft.days.toString().padStart(2, "0")}</div>
                 <div className="mt-3 text-sm font-niramit text-gray-600">Hari</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-kaushian text-gray-800 mb-1">{timeLeft.hours.toString().padStart(2, "0")}</div>
+                <div className="text-2xl font-kaushian text-gray-800 mb-1">{timeLeft.hours.toString().padStart(2, "0")}</div>
                 <div className="mt-3 text-sm font-niramit text-gray-600">Jam</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-kaushian text-gray-800 mb-1">{timeLeft.minutes.toString().padStart(2, "0")}</div>
+                <div className="text-2xl font-kaushian text-gray-800 mb-1">{timeLeft.minutes.toString().padStart(2, "0")}</div>
                 <div className="mt-3 text-sm font-niramit text-gray-600">Menit</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-kaushian text-gray-800 mb-1">{timeLeft.seconds.toString().padStart(2, "0")}</div>
+                <div className="text-2xl font-kaushian text-gray-800 mb-1">{timeLeft.seconds.toString().padStart(2, "0")}</div>
                 <div className="mt-3 text-sm font-niramit text-gray-600">Detik</div>
               </div>
             </div>
@@ -81,13 +81,13 @@ const MainSection: React.FC = () => {
                 <Clock className="w-4 h-4 text-gray-600" />
                 <span className="text-gray-700 font-niramitbold">Sabtu, 19 Juli 2025</span>
               </div>
-              <div className="text-gray-700 font-niramitmedium">08:00 - 09:00 WIB</div>
+              <div className="text-gray-700 font-niramitmedium">09:00 - 10.30</div>
 
               <div className="flex items-start justify-center gap-2 mt-4">
                 <div className="w-4 h-4 text-gray-600 mt-1 flex" />
                 <div className="text-center">
-                  <div className="font-semibold text-gray-800">Kediaman Mempelai Wanita</div>
-                  <div className="text-sm text-gray-600 leading-relaxed">
+                  <div className="font-niramitsemibold text-gray-800">Kediaman Mempelai Wanita</div>
+                  <div className="text-sm text-gray-600 font-niramit leading-relaxed">
                     Kp. Pasar Kemis Blok. Sukaninggal RT. 01/14 Manggahang, Kec. Baleendah
                     <br />
                     Kab. Bandung, Jawa Barat 40375
@@ -116,7 +116,7 @@ const MainSection: React.FC = () => {
                 <Clock className="w-4 h-4 text-gray-600" />
                 <span className=" text-gray-700 font-niramitbold">Sabtu, 19 Juli 2025</span>
               </div>
-              <div className=" text-gray-700 font-niramitmedium">08:00 - 09:00 WIB</div>
+              <div className=" text-gray-700 font-niramitmedium">10.30 - Selesai</div>
 
               <div className="flex items-start justify-center gap-2 mt-4">
                 <div className="w-4 h-4 text-gray-600 mt-1 flex-shrink-0" />

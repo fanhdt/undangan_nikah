@@ -32,10 +32,10 @@ const Opening: React.FC<OpeningProps> = ({ guestName = "Teman Online", groomName
       <section className="relative z-10 text-center px-4 sm:px-6 md:px-8 w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl">
         <header className="mb-8 sm:mb-12 md:mb-16">
           <p className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl font-niramit tracking-wide mb-4 sm:mb-6 opacity-90">The Wedding of</p>
-          <h1 className="font-kaushian text-white text-4xl md:text-5xl lg:text-6xl mb-6 sm:mb-8 font-normal leading-tight drop-shadow-lg">
+          <h1 className="font-kaushian text-white text-3xl md:text-5xl lg:text-6xl mb-6 sm:mb-8 font-normal leading-tight drop-shadow-lg">
             {groomName} & {brideName}
           </h1>
-          <time dateTime={eventDate} className="block mb-6 sm:mb-10 md:mb-12 text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl font-niramit tracking-widest opacity-90">
+          <time dateTime={eventDate} className="block mb-6 sm:mb-10 md:mb-12 text-gray-300 text-sm sm:text-lg md:text-xl lg:text-2xl font-niramit tracking-widest opacity-90">
             {formatDate(eventDate)}
           </time>
         </header>

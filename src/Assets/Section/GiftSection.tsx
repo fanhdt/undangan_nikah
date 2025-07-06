@@ -24,16 +24,16 @@ const GiftSection = () => {
           <div className="bg-white rounded-lg px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 text-black shadow-lg">
             <div className="flex items-start justify-between">
               <div className="flex items-center space-x-4 sm:space-x-6 w-full">
-                <div className="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <div className="w-8 sm:w-12 md:w-16 h-8 sm:h-12 md:h-16 bg-white rounded-md flex items-center justify-center">
-                    <Image src={gopayIMG} width={100} height={100} alt="e-wallet" />
+                <div className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 sm:w-18 md:w-22 h-14 sm:h-18 md:h-22 bg-white rounded-md flex items-center justify-center">
+                    <Image src={gopayIMG} width={120} height={120} alt="e-wallet" />
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-niramitbold text-base sm:text-lg md:text-xl lg:text-2xl">Mutiara</h3>
                   <p className="text-gray-800 font-niramit text-sm sm:text-base md:text-lg mt-1 sm:mt-2 break-all">No. E-Wallet: 0895339863338</p>
                   <button
-                    onClick={() => copyToClipboard("1234567890", "bca")}
+                    onClick={() => copyToClipboard("0895339863338", "Gopay")}
                     className="mt-2 sm:mt-3 md:mt-4 px-3 sm:px-4 md:px-6 py-1 sm:py-2 bg-amber-100 hover:bg-amber-200 rounded-lg shadow-md text-xs sm:text-sm md:text-base font-medium text-amber-800 transition-colors flex items-center space-x-1 sm:space-x-2"
                   >
                     {copiedAccount === "bca" ? (
@@ -57,19 +57,19 @@ const GiftSection = () => {
           <div className="bg-white rounded-lg px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-10 text-black shadow-lg">
             <div className="flex items-start justify-between">
               <div className="flex items-center space-x-4 sm:space-x-6 w-full">
-                <div className="w-12 sm:w-16 md:w-20 h-12 sm:h-16 md:h-20 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <div className="w-8 sm:w-12 md:w-16 h-8 sm:h-12 md:h-16 bg-white rounded-md flex items-center justify-center">
-                    <Image src={gopayIMG} width={100} height={100} alt="e-wallet" />
+                <div className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-14 sm:w-18 md:w-22 h-14 sm:h-18 md:h-22 bg-white rounded-md flex items-center justify-center">
+                    <Image src={gopayIMG} width={120} height={120} alt="e-wallet" />
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-niramitbold text-base sm:text-lg md:text-xl lg:text-2xl">Daffa</h3>
+                  <h3 className="font-niramitbold text-base sm:text-lg md:text-xl lg:text-2xl">Mutiara</h3>
                   <p className="text-gray-800 font-niramit text-sm sm:text-base md:text-lg mt-1 sm:mt-2 break-all">No. E-Wallet: 082116990548</p>
                   <button
-                    onClick={() => copyToClipboard("085712345678", "ovo")}
+                    onClick={() => copyToClipboard("082116990548", "Gopay")}
                     className="mt-2 sm:mt-3 md:mt-4 px-3 sm:px-4 md:px-6 py-1 sm:py-2 bg-amber-100 hover:bg-amber-200 rounded-lg shadow-md text-xs sm:text-sm md:text-base font-medium text-amber-800 transition-colors flex items-center space-x-1 sm:space-x-2"
                   >
-                    {copiedAccount === "ovo" ? (
+                    {copiedAccount === "bca" ? (
                       <>
                         <Check size={12} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
                         <span className="font-niramit">Tersalin</span>

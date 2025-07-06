@@ -7,7 +7,7 @@ const BrideName = () => {
   const groom = "/Image/Daffa.png";
 
   return (
-    <div className="min-h-screen flex flex-col bg-white relative w-full overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-white relative w-full pb-6">
       {/* Top wave separator to connect with Opening */}
       <div className="absolute top-0 left-0 right-0 w-full overflow-hidden" style={{ marginTop: "-1px" }}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full h-auto block" preserveAspectRatio="none" style={{ minHeight: "100px" }}>
@@ -21,10 +21,10 @@ const BrideName = () => {
 
       {/* Decorative elements */}
       <div className="absolute top-20 left-8 w-24 h-24 bg-gradient-to-br from-amber-200/30 to-amber-300/20 rounded-full blur-2xl animate-pulse" />
-      <div className="absolute bottom-32 right-8 w-32 h-32 bg-gradient-to-br from-amber-300/30 to-amber-400/20 rounded-full blur-2xl animate-pulse delay-1000" />
+      <div className="absolute bottom-32 right-8 w-32 h-32 bg-gradient-to-br from-amber-300/30 to-amber-400/20 rounded-full blur-2xl animate-pulse delay-1000 " />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 md:py-20 relative z-10">
-        <section className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl bg-white/80 backdrop-blur-sm p-6 sm:p-8 md:p-10 lg:p-12 rounded-3xl shadow-xl border border-amber-100 flex flex-col items-center space-y-12 sm:space-y-16 md:space-y-20">
+        <section className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl bg-white/80 backdrop-blur-sm p-6 sm:p-8 md:p-10 lg:p-12 rounded-3xl shadow-xl border border-amber-100 flex flex-col items-center space-y-12 sm:space-y-16 md:space-y-20 ">
           {/* Bride Section */}
           <div className="flex flex-col items-center text-center w-full">
             <div className="relative group mb-6 sm:mb-8">

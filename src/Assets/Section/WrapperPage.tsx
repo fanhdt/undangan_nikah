@@ -72,7 +72,7 @@ const Page: React.FC = () => {
   return (
     <div className="relative w-full min-h-screen overflow-x-hidden">
       {/* Start Invitational Overlay */}
-      {!isInvitationOpen && <StartInvitational onOpenInvitation={handleOpenInvitation} groomName="Mutiara" brideName="Daffa" guestName={`Kepada Yth. ${guestName}`} eventDate="Teman Online" eventLocation="di Tempat" />}
+      {!isInvitationOpen && <StartInvitational onOpenInvitation={handleOpenInvitation} groomName="Mutiara" brideName="Daffa" guestName={` ${guestName}`} eventDate="19-07-2025" eventLocation="di Tempat" />}
 
       {/* Main Content */}
       {isInvitationOpen && (
