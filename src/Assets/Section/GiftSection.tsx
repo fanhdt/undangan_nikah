@@ -63,7 +63,7 @@ const GiftSection = () => {
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-niramitbold text-base sm:text-lg md:text-xl lg:text-2xl">Mutiara</h3>
+                  <h3 className="font-niramitbold text-base sm:text-lg md:text-xl lg:text-2xl">Daffa</h3>
                   <p className="text-gray-800 font-niramit text-sm sm:text-base md:text-lg mt-1 sm:mt-2 break-all">No. E-Wallet: 082116990548</p>
                   <button
                     onClick={() => copyToClipboard("082116990548", "Gopay")}

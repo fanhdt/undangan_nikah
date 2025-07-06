@@ -1,4 +1,4 @@
-// StartInvitational.tsx - Fixed with immediate image loading
+// StartInvitational.tsx - Fixed backdrop blur persistence
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -118,29 +118,31 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
       ease: "power2.inOut",
     });
 
-    // Create exit animation
+    // Create exit animation - Modified to keep backdrop blur
     const tl = gsap.timeline({
       onComplete: () => {
         onOpenInvitation();
       },
     });
 
-    // Animate elements out
+    // Animate content elements out first
     tl.to([buttonRef.current, guestInfoRef.current, coupleNamesRef.current, titleRef.current], {
       opacity: 0,
       y: -30,
       duration: 0.5,
       ease: "power2.in",
       stagger: 0.1,
-    }).to(
-      containerRef.current,
-      {
-        opacity: 0,
-        duration: 0.3,
-        ease: "power2.in",
-      },
-      "-=0.2"
-    );
+    })
+      // Then fade out the entire container including backdrop
+      .to(
+        containerRef.current,
+        {
+          opacity: 0,
+          duration: 0.4,
+          ease: "power2.in",
+        },
+        "-=0.1" // Start this animation slightly before the previous one ends
+      );
   };
 
   return (

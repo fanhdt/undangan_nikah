@@ -75,7 +75,7 @@ const AutoScroll = forwardRef<AutoScrollRef, AutoScrollProps>((props, ref) => {
 
   return (
     <div className="fixed top-28 -right-9 z-50 opacity-35">
-      <button onClick={toggleAutoScroll} className="bg-[#F7F0E5] px-4 py-2 -rotate-90 transform-gpu font-kaushian text-black text-sm hover:opacity-80 transition-opacity">
+      <button onClick={toggleAutoScroll} className="bg-[#F7F0E5] px-4 py-2 -rotate-90 transform-gpu font-kaushian text-black text-sm hover:opacity-50 transition-opacity">
         <span className={isActive ? "" : "line-through decoration-black decoration-[1.5px]"}>Auto Scroll</span>
       </button>
     </div>
