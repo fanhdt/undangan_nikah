@@ -154,7 +154,7 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
       </div>
 
       {/* Dark Overlay for Text Readability */}
-      <div ref={overlayRef} className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
+      <div ref={overlayRef} className="absolute inset-0 bg-black/40" />
 
       {/* Content Container */}
       <div ref={contentRef} className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8">
@@ -177,7 +177,7 @@ const StartInvitational: React.FC<StartInvitationalProps> = ({
 
         {/* Guest Information */}
         <div ref={guestInfoRef} className="mb-12 sm:mb-16">
-          <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/30 shadow-2xl">
+          <div className="bg-white/20 rounded-2xl p-6 sm:p-8 border border-white/30 shadow-2xl">
             {displayGuestName.toLowerCase() !== "teman online" ? (
               <>
                 <p className="text-white text-base font-niramit sm:text-lg mb-2 drop-shadow-md">Kepada Yth. Bpk/Ibu/Saudara/i</p>
