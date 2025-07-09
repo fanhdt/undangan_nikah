@@ -24,7 +24,7 @@ const Closing = () => {
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-kaushian text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-amber-700 mb-6 md:mb-8">Terima Kasih</h2>
           <p className="font-niramit text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-700 max-w-3xl mx-auto mb-6">
-            Merupakan kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kami berdua.
+            Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada kami berdua.
           </p>
         </div>
 

@@ -111,7 +111,7 @@ const MainSection: React.FC = () => {
           </div>
 
           {/* Resepsi Card */}
-          <div className="bg-white rounded-lg shadow-lg p-6">
+          <div className="bg-white rounded-lg shadow-lg px-6 py-8">
             <h2 className="text-4xl font-kaushian font-bold text-center mb-4 text-gray-800">Walimatul &apos;Ursy</h2>
 
             <div className="space-y-3 text-center">
