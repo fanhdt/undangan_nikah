@@ -42,6 +42,9 @@ const MainSection: React.FC = () => {
   const handleAddressClick = () => {
     window.open("https://maps.app.goo.gl/gV2bHx1NgxebaDqP8", "_blank");
   };
+  const handleAddressClickReception = () => {
+    window.open("https://maps.app.goo.gl/FNNhXvbMCu64j6sF8", "_blank");
+  };
 
   return (
     <section className="bg-cream">
@@ -114,23 +117,26 @@ const MainSection: React.FC = () => {
             <div className="space-y-3 text-center">
               <div className="flex items-center justify-center gap-2">
                 <Clock className="w-4 h-4 text-gray-600" />
-                <span className=" text-gray-700 font-niramitbold">Sabtu, 19 Juli 2025</span>
+                <span className=" text-gray-700 font-niramitbold">Minggu, 27 Juli 2025</span>
               </div>
-              <div className=" text-gray-700 font-niramitmedium">10.30 - Selesai</div>
+              <div className=" text-gray-700 font-niramitmedium">10.00 - Selesai</div>
 
               <div className="flex items-start justify-center gap-2 mt-4">
                 <div className="w-4 h-4 text-gray-600 mt-1 flex-shrink-0" />
                 <div className="text-center">
-                  <div className="font-semibold font-niramit text-gray-800">Kediaman Mempelai Wanita</div>
+                  <div className="font-semibold font-niramit text-gray-800">Pabrik Tahu Putra Tunggal</div>
                   <div className="text-sm font-niramit text-gray-600 leading-relaxed">
-                    Kp. Pasar Kemis Blok. Sukaninggal RT. 01/14 Manggahang, Kec. Baleendah
+                    Jl. Laswi Kp. Jongor Kulon RT. 02 RW. 11 Desa. Sarimahi, Kec. Ciparay, Kab. Bandung, Jawa Barat
                     <br />
-                    Kab. Bandung, Jawa Barat 40375
+                    Kab. Bandung, Jawa Barat 40381
                   </div>
                 </div>
               </div>
 
-              <button onClick={handleAddressClick} className="group mt-4 px-6 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto outline outline-black outline-1 hover:bg-gray-800 hover:scale-105 hover:shadow-lg">
+              <button
+                onClick={handleAddressClickReception}
+                className="group mt-4 px-6 py-2 rounded-lg transition-all duration-300 flex items-center gap-2 mx-auto outline outline-black outline-1 hover:bg-gray-800 hover:scale-105 hover:shadow-lg"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="transition-colors duration-300 text-black group-hover:text-white">
                   <path
                     fill="currentColor"
