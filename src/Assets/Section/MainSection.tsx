@@ -84,7 +84,7 @@ const MainSection: React.FC = () => {
                 <Clock className="w-4 h-4 text-gray-600" />
                 <span className="text-gray-700 font-niramitbold">Sabtu, 19 Juli 2025</span>
               </div>
-              <div className="text-gray-700 font-niramitmedium">09:00 - 10.30</div>
+              <div className="text-gray-700 font-niramitmedium">09:00 - Selesai</div>
 
               <div className="flex items-start justify-center gap-2 mt-4">
                 <div className="w-4 h-4 text-gray-600 mt-1 flex" />
@@ -124,7 +124,7 @@ const MainSection: React.FC = () => {
               <div className="flex items-start justify-center gap-2 mt-4">
                 <div className="w-4 h-4 text-gray-600 mt-1 flex-shrink-0" />
                 <div className="text-center">
-                  <div className="font-semibold font-niramit text-gray-800">Pabrik Tahu Putra Tunggal</div>
+                  <div className="font-semibold font-niramit text-gray-800">Kediaman Mempelai Pria</div>
                   <div className="text-sm font-niramit text-gray-600 leading-relaxed">
                     Jl. Laswi Kp. Jongor Kulon RT. 02 RW. 11 Desa. Sarimahi, Kec. Ciparay, Kab. Bandung, Jawa Barat
                     <br />
