@@ -40,10 +40,45 @@ const MainSection: React.FC = () => {
   }, []);
 
   const handleAddressClick = () => {
-    window.open("https://maps.app.goo.gl/gV2bHx1NgxebaDqP8", "_blank");
+    try {
+      // Coba buka dengan shortened link dulu
+      const newWindow = window.open("https://maps.app.goo.gl/gV2bHx1NgxebaDqP8", "_blank");
+
+      // Jika pop-up diblokir, gunakan fallback
+      if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+        // Fallback ke Google Maps dengan address langsung
+        const address = "Kp. Pasar Kemis Blok. Sukaninggal RT. 01/14 Manggahang, Kec. Baleendah, Kab. Bandung, Jawa Barat 40375";
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+        window.location.href = mapsUrl;
+      }
+    } catch (error) {
+      console.error("Error opening map:", error);
+      // Fallback jika terjadi error
+      const address = "Kp. Pasar Kemis Blok. Sukaninggal RT. 01/14 Manggahang, Kec. Baleendah, Kab. Bandung, Jawa Barat 40375";
+      const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+      window.location.href = mapsUrl;
+    }
   };
+
   const handleAddressClickReception = () => {
-    window.open("https://maps.app.goo.gl/FNNhXvbMCu64j6sF8", "_blank");
+    try {
+      // Coba buka dengan shortened link dulu
+      const newWindow = window.open("https://maps.app.goo.gl/FNNhXvbMCu64j6sF8", "_blank");
+
+      // Jika pop-up diblokir, gunakan fallback
+      if (!newWindow || newWindow.closed || typeof newWindow.closed === "undefined") {
+        // Fallback ke Google Maps dengan address langsung
+        const address = "Jl. Laswi Kp. Jongor Kulon RT. 02 RW. 11 Desa. Sarimahi, Kec. Ciparay, Kab. Bandung, Jawa Barat 40381";
+        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+        window.location.href = mapsUrl;
+      }
+    } catch (error) {
+      console.error("Error opening map:", error);
+      // Fallback jika terjadi error
+      const address = "Jl. Laswi Kp. Jongor Kulon RT. 02 RW. 11 Desa. Sarimahi, Kec. Ciparay, Kab. Bandung, Jawa Barat 40381";
+      const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+      window.location.href = mapsUrl;
+    }
   };
 
   return (
@@ -124,9 +159,9 @@ const MainSection: React.FC = () => {
               <div className="flex items-start justify-center gap-2 mt-4">
                 <div className="w-4 h-4 text-gray-600 mt-1 flex-shrink-0" />
                 <div className="text-center">
-                  <div className="font-semibold font-niramit text-gray-800">Kediaman Mempelai Pria</div>
+                  <div className=" font-niramitsemibold text-gray-800">Kediaman Mempelai Pria</div>
                   <div className="text-sm font-niramit text-gray-600 leading-relaxed">
-                    Jl. Laswi Kp. Jongor Kulon RT. 02 RW. 11 Desa. Sarimahi, Kec. Ciparay, Kab. Bandung, Jawa Barat
+                    Jl. Laswi Kp. Jongor Kulon RT. 02 RW. 11 Desa. Sarimahi, Kec. Ciparay
                     <br />
                     Kab. Bandung, Jawa Barat 40381
                   </div>

@@ -208,7 +208,7 @@ const CommentSection: React.FC = () => {
             {comments.length > 3 && (
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="w-full bg-white/50 hover:bg-white/70 text-gray-700 font-medium py-3 sm:py-4 px-4 rounded-lg border border-orange-200 transition-colors duration-200 text-sm sm:text-base md:text-lg"
+                className="w-full bg-white/50 hover:bg-white/70 text-gray-700 font-medium py-3 sm:py-4 px-4 rounded-lg border border-orange-200 transition-colors duration-200 text-sm sm:text-base md:text-lg font-niramit"
               >
                 {showAll ? "Sembunyikan" : `Lihat Semua (${comments.length - 3} lainnya)`}
               </button>
